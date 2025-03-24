@@ -58,7 +58,7 @@ if "%choice%"=="18" goto php81add
 if "%choice%"=="19" goto php82remove
 if "%choice%"=="20" goto php82add
 echo Invalid choice. Please try again.
-timeout /t 2 >nul
+timeout /t 5 >nul
 goto menu
 
 if errorlevel 20 goto php82add
@@ -126,7 +126,7 @@ if %PHP_FOUND%==0 (
 set "LAST_ACTION=%PHP_VERSION%"
 echo.
 echo 
-timeout /t 2 >nul
+timeout /t 5 >nul
 goto menu
 
 :php56remove
@@ -134,25 +134,36 @@ set "LAST_ACTION=UNINSTALLED PHP VERSION 5.6"
 if exist "D:\xampp\apache" (
     ren "D:\xampp\apache" "apache-5.6"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo Apache folder not found.
-    echo.
     echo 
+    echo.
 )
 if exist "D:\xampp\php" (
     ren "D:\xampp\php" "php-5.6"
     set "PATH=D:\xampp\php-5.6;%PATH%"
     echo PHP folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo PHP folder not found.
-    echo.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin" (
+    ren "D:\xampp\phpMyAdmin" "phpMyAdmin-4.9.2"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php56add
@@ -160,25 +171,36 @@ set "LAST_ACTION=INSTALLED PHP VERSION 5.6"
 if exist "D:\xampp\apache-5.6" (
     ren "D:\xampp\apache-5.6" "apache"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
-    echo Apache 5.6 folder not found.
-    echo.
+    echo Apache folder not found.
     echo 
+    echo.
 )
 if exist "D:\xampp\php-5.6" (
     ren "D:\xampp\php-5.6" "php"
     set "PATH=D:\xampp\php;%PATH%"
-    echo PHP 5.6 folder renamed successfully.
-    echo.
+    echo PHP folder renamed successfully.
     echo 
+    echo.
 ) else (
-    echo PHP 5.6 folder not found.
-    echo.
+    echo PHP folder not found.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin-4.9.2" (
+    ren "D:\xampp\phpMyAdmin-4.9.2" "phpMyAdmin"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php70remove
@@ -186,25 +208,36 @@ set "LAST_ACTION=UNINSTALLED PHP VERSION 7.0"
 if exist "D:\xampp\apache" (
     ren "D:\xampp\apache" "apache-7.0"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo Apache folder not found.
-    echo.
     echo 
+    echo.
 )
 if exist "D:\xampp\php" (
     ren "D:\xampp\php" "php-7.0"
     set "PATH=D:\xampp\php-7.0;%PATH%"
     echo PHP folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo PHP folder not found.
-    echo.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin" (
+    ren "D:\xampp\phpMyAdmin" "phpMyAdmin-4.9.2"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php70add
@@ -212,25 +245,36 @@ set "LAST_ACTION=INSTALLED PHP VERSION 7.0"
 if exist "D:\xampp\apache-7.0" (
     ren "D:\xampp\apache-7.0" "apache"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
-    echo Apache 7.0 folder not found.
-    echo.
+    echo Apache folder not found.
     echo 
+    echo.
 )
 if exist "D:\xampp\php-7.0" (
     ren "D:\xampp\php-7.0" "php"
     set "PATH=D:\xampp\php;%PATH%"
-    echo PHP 7.0 folder renamed successfully.
-    echo.
+    echo PHP folder renamed successfully.
     echo 
+    echo.
 ) else (
-    echo PHP 7.0 folder not found.
-    echo.
+    echo PHP folder not found.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin-4.9.2" (
+    ren "D:\xampp\phpMyAdmin-4.9.2" "phpMyAdmin"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php71remove
@@ -238,25 +282,36 @@ set "LAST_ACTION=UNINSTALLED PHP VERSION 7.1"
 if exist "D:\xampp\apache" (
     ren "D:\xampp\apache" "apache-7.1"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo Apache folder not found.
-    echo.
     echo 
+    echo.
 )
 if exist "D:\xampp\php" (
     ren "D:\xampp\php" "php-7.1"
     set "PATH=D:\xampp\php-7.1;%PATH%"
     echo PHP folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo PHP folder not found.
-    echo.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin" (
+    ren "D:\xampp\phpMyAdmin" "phpMyAdmin-4.9.2"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php71add
@@ -264,25 +319,36 @@ set "LAST_ACTION=INSTALLED PHP VERSION 7.1"
 if exist "D:\xampp\apache-7.1" (
     ren "D:\xampp\apache-7.1" "apache"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
-    echo Apache 7.1 folder not found.
-    echo.
+    echo Apache folder not found.
     echo 
+    echo.
 )
 if exist "D:\xampp\php-7.1" (
     ren "D:\xampp\php-7.1" "php"
     set "PATH=D:\xampp\php;%PATH%"
-    echo PHP 7.1 folder renamed successfully.
-    echo.
+    echo PHP folder renamed successfully.
     echo 
+    echo.
 ) else (
-    echo PHP 7.1 folder not found.
-    echo.
+    echo PHP folder not found.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin-4.9.2" (
+    ren "D:\xampp\phpMyAdmin-4.9.2" "phpMyAdmin"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php72remove
@@ -290,25 +356,36 @@ set "LAST_ACTION=UNINSTALLED PHP VERSION 7.2"
 if exist "D:\xampp\apache" (
     ren "D:\xampp\apache" "apache-7.2"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo Apache folder not found.
-    echo.
     echo 
+    echo.
 )
 if exist "D:\xampp\php" (
     ren "D:\xampp\php" "php-7.2"
     set "PATH=D:\xampp\php-7.2;%PATH%"
     echo PHP folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo PHP folder not found.
-    echo.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin" (
+    ren "D:\xampp\phpMyAdmin" "phpMyAdmin-5.2.1"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php72add
@@ -316,25 +393,36 @@ set "LAST_ACTION=INSTALLED PHP VERSION 7.2"
 if exist "D:\xampp\apache-7.2" (
     ren "D:\xampp\apache-7.2" "apache"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
-    echo Apache 7.2 folder not found.
-    echo.
+    echo Apache folder not found.
     echo 
+    echo.
 )
 if exist "D:\xampp\php-7.2" (
     ren "D:\xampp\php-7.2" "php"
     set "PATH=D:\xampp\php;%PATH%"
-    echo PHP 7.2 folder renamed successfully.
-    echo.
+    echo PHP folder renamed successfully.
     echo 
+    echo.
 ) else (
-    echo PHP 7.2 folder not found.
-    echo.
+    echo PHP folder not found.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin-5.2.1" (
+    ren "D:\xampp\phpMyAdmin-5.2.1" "phpMyAdmin"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php73remove
@@ -342,25 +430,36 @@ set "LAST_ACTION=UNINSTALLED PHP VERSION 7.3"
 if exist "D:\xampp\apache" (
     ren "D:\xampp\apache" "apache-7.3"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo Apache folder not found.
-    echo.
     echo 
+    echo.
 )
 if exist "D:\xampp\php" (
     ren "D:\xampp\php" "php-7.3"
     set "PATH=D:\xampp\php-7.3;%PATH%"
     echo PHP folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo PHP folder not found.
-    echo.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin" (
+    ren "D:\xampp\phpMyAdmin" "phpMyAdmin-5.2.1"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php73add
@@ -368,25 +467,36 @@ set "LAST_ACTION=INSTALLED PHP VERSION 7.3"
 if exist "D:\xampp\apache-7.3" (
     ren "D:\xampp\apache-7.3" "apache"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
-    echo Apache 7.3 folder not found.
-    echo.
+    echo Apache folder not found.
     echo 
+    echo.
 )
 if exist "D:\xampp\php-7.3" (
     ren "D:\xampp\php-7.3" "php"
     set "PATH=D:\xampp\php;%PATH%"
-    echo PHP 7.3 folder renamed successfully.
-    echo.
+    echo PHP folder renamed successfully.
     echo 
+    echo.
 ) else (
-    echo PHP 7.3 folder not found.
-    echo.
+    echo PHP folder not found.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin-5.2.1" (
+    ren "D:\xampp\phpMyAdmin-5.2.1" "phpMyAdmin"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php74remove
@@ -394,25 +504,36 @@ set "LAST_ACTION=UNINSTALLED PHP VERSION 7.4"
 if exist "D:\xampp\apache" (
     ren "D:\xampp\apache" "apache-7.4"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo Apache folder not found.
-    echo.
     echo 
+    echo.
 )
 if exist "D:\xampp\php" (
     ren "D:\xampp\php" "php-7.4"
     set "PATH=D:\xampp\php-7.4;%PATH%"
     echo PHP folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo PHP folder not found.
-    echo.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin" (
+    ren "D:\xampp\phpMyAdmin" "phpMyAdmin-5.2.1"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php74add
@@ -420,25 +541,36 @@ set "LAST_ACTION=INSTALLED PHP VERSION 7.4"
 if exist "D:\xampp\apache-7.4" (
     ren "D:\xampp\apache-7.4" "apache"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
-    echo Apache 7.4 folder not found.
-    echo.
+    echo Apache folder not found.
     echo 
+    echo.
 )
 if exist "D:\xampp\php-7.4" (
     ren "D:\xampp\php-7.4" "php"
     set "PATH=D:\xampp\php;%PATH%"
-    echo PHP 7.4 folder renamed successfully.
-    echo.
+    echo PHP folder renamed successfully.
     echo 
+    echo.
 ) else (
-    echo PHP 7.4 folder not found.
-    echo.
+    echo PHP folder not found.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin-5.2.1" (
+    ren "D:\xampp\phpMyAdmin-5.2.1" "phpMyAdmin"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php80remove
@@ -446,25 +578,36 @@ set "LAST_ACTION=UNINSTALLED PHP VERSION 8.0"
 if exist "D:\xampp\apache" (
     ren "D:\xampp\apache" "apache-8.0"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo Apache folder not found.
-    echo.
     echo 
+    echo.
 )
 if exist "D:\xampp\php" (
     ren "D:\xampp\php" "php-8.0"
     set "PATH=D:\xampp\php-8.0;%PATH%"
     echo PHP folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo PHP folder not found.
-    echo.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin" (
+    ren "D:\xampp\phpMyAdmin" "phpMyAdmin-5.2.1"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php80add
@@ -472,25 +615,36 @@ set "LAST_ACTION=INSTALLED PHP VERSION 8.0"
 if exist "D:\xampp\apache-8.0" (
     ren "D:\xampp\apache-8.0" "apache"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
-    echo Apache 8.0 folder not found.
-    echo.
+    echo Apache folder not found.
     echo 
+    echo.
 )
 if exist "D:\xampp\php-8.0" (
     ren "D:\xampp\php-8.0" "php"
     set "PATH=D:\xampp\php;%PATH%"
-    echo PHP 8.0 folder renamed successfully.
-    echo.
+    echo PHP folder renamed successfully.
     echo 
+    echo.
 ) else (
-    echo PHP 8.0 folder not found.
-    echo.
+    echo PHP folder not found.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin-5.2.1" (
+    ren "D:\xampp\phpMyAdmin-5.2.1" "phpMyAdmin"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php81remove
@@ -498,25 +652,36 @@ set "LAST_ACTION=UNINSTALLED PHP VERSION 8.1"
 if exist "D:\xampp\apache" (
     ren "D:\xampp\apache" "apache-8.1"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo Apache folder not found.
-    echo.
     echo 
+    echo.
 )
 if exist "D:\xampp\php" (
     ren "D:\xampp\php" "php-8.1"
     set "PATH=D:\xampp\php-8.1;%PATH%"
     echo PHP folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo PHP folder not found.
-    echo.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin" (
+    ren "D:\xampp\phpMyAdmin" "phpMyAdmin-5.2.1"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php81add
@@ -524,25 +689,36 @@ set "LAST_ACTION=INSTALLED PHP VERSION 8.1"
 if exist "D:\xampp\apache-8.1" (
     ren "D:\xampp\apache-8.1" "apache"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
-    echo Apache 8.1 folder not found.
-    echo.
+    echo Apache folder not found.
     echo 
+    echo.
 )
 if exist "D:\xampp\php-8.1" (
     ren "D:\xampp\php-8.1" "php"
     set "PATH=D:\xampp\php;%PATH%"
-    echo PHP 8.1 folder renamed successfully.
-    echo.
+    echo PHP folder renamed successfully.
     echo 
+    echo.
 ) else (
-    echo PHP 8.1 folder not found.
-    echo.
+    echo PHP folder not found.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin-5.2.1" (
+    ren "D:\xampp\phpMyAdmin-5.2.1" "phpMyAdmin"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php82remove
@@ -550,25 +726,36 @@ set "LAST_ACTION=UNINSTALLED PHP VERSION 8.2"
 if exist "D:\xampp\apache" (
     ren "D:\xampp\apache" "apache-8.2"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo Apache folder not found.
-    echo.
     echo 
+    echo.
 )
 if exist "D:\xampp\php" (
     ren "D:\xampp\php" "php-8.2"
     set "PATH=D:\xampp\php-8.2;%PATH%"
     echo PHP folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
     echo PHP folder not found.
-    echo.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin" (
+    ren "D:\xampp\phpMyAdmin" "phpMyAdmin-5.2.1"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
 
 :php82add
@@ -576,23 +763,34 @@ set "LAST_ACTION=INSTALLED PHP VERSION 8.2"
 if exist "D:\xampp\apache-8.2" (
     ren "D:\xampp\apache-8.2" "apache"
     echo Apache folder renamed successfully.
-    echo.
     echo 
+    echo.
 ) else (
-    echo Apache 8.2 folder not found.
-    echo.
+    echo Apache folder not found.
     echo 
+    echo.
 )
 if exist "D:\xampp\php-8.2" (
     ren "D:\xampp\php-8.2" "php"
     set "PATH=D:\xampp\php;%PATH%"
-    echo PHP 8.2 folder renamed successfully.
-    echo.
+    echo PHP folder renamed successfully.
     echo 
+    echo.
 ) else (
-    echo PHP 8.2 folder not found.
-    echo.
+    echo PHP folder not found.
     echo 
+    echo.
 )
-timeout /t 2 >nul
+if exist "D:\xampp\phpMyAdmin-5.2.1" (
+    ren "D:\xampp\phpMyAdmin-5.2.1" "phpMyAdmin"
+    echo phpMyAdmin folder renamed successfully.
+    echo 
+    echo.
+) else (
+    echo phpMyAdmin folder not found.
+    echo 
+    echo.
+)
+timeout /t 5 >nul
+echo 
 goto menu
