@@ -1,4 +1,4 @@
-# PHP Version Switcher
+# PHP Version Switcher for XAMPP
 
 A batch script to manage multiple PHP versions in XAMPP environment.
 
