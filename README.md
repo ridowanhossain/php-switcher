@@ -1,14 +1,16 @@
-# PHP Version Controller for XAMPP
+# PHP Version Switcher
 
-## Overview
-The PHP Version Controller for XAMPP is a batch script designed to manage and switch between different PHP versions within a XAMPP installation. It allows users to easily check the current PHP version, install, or uninstall specific PHP versions.
+A batch script to manage multiple PHP versions in XAMPP environment.
 
-## Features
-- Check the current PHP version.
-- Install or uninstall PHP versions ranging from 5.6 to 8.2.
-- Provides feedback on successful operations or errors.
+## Component Compatibility
 
-## Installation
-1. Clone the repository to your local machine.
-   ```bash
-   git clone https://github.com/yourusername/php-switcher.git
+### phpMyAdmin Versions
+- **phpMyAdmin 5.2.1**
+  - Compatible with PHP versions: 7.2, 7.3, 7.4, 8.0, 8.1, 8.2
+
+- **phpMyAdmin 4.9.2**
+  - Compatible with PHP versions: 5.6, 7.0, 7.1
+
+### Database
+- **MariaDB 10.4.32**
+  - Compatible with all PHP versions (5.6 to 8.2)
