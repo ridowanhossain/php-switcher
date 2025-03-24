@@ -2,6 +2,8 @@
 
 A batch script to manage multiple PHP versions in XAMPP environment.
 
+![Screenshot](Screenshot%202025-03-24%20073402.png)
+
 ## How to Install
 
 1. **Download the PHP Version Switcher:**
