@@ -2,7 +2,7 @@
 
 A batch script to manage multiple PHP versions in XAMPP environment.
 
-![Screenshot](Screenshot%202025-03-24%20073402.png)
+![Screenshot](cmd.png)
 
 ## How to Install
 
