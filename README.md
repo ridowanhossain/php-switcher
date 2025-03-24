@@ -9,12 +9,20 @@ A batch script to manage multiple PHP versions in XAMPP environment.
 1. **Download the PHP Version Switcher:**
    - Clone the repository or download the batch script to your local machine.
 
-2. **Place the Script:**
+2. **Backup Original XAMPP Components:**
+   - Navigate to your XAMPP installation directory
+   - Rename the following folders:
+     - `apache` to `apache.backup`
+     - `mysql` to `mysql.backup`
+     - `php` to `php.backup`
+     - `phpMyAdmin` to `phpMyAdmin.backup`
+
+3. **Place the Script:**
    - Ensure the script is placed in the directory where your XAMPP is installed.
    - Open `php-switcher.bat` using a text or code editor. Use the find and replace feature (Ctrl + H) to replace all instances of `D:\` with your actual XAMPP installation directory.
    - This will ensure the script paths align with your XAMPP directory structure.
 
-3. **Run the Script:**
+4. **Run the Script:**
    - Execute the script by double-clicking on `php-switcher.bat` and enter your choice.
 
 ## How to Use
